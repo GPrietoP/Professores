@@ -1,9 +1,16 @@
 # Professores
 Projeto do curso Introduction to Relational Databases in SQL
 
-<td align="center"><a href="#certificates"><img (https://user-images.githubusercontent.com/128917882/232261122-4d245afb-8a61-4db8-a8d7-49d8a7d116d7.png) width="75px;" height="75px;" alt="Certificates"/><br /><b>Certificates</b></a></td>
+<center>
+<table>
+ <tr>
+  <td align="center"><a href="#certificates"><img src = "1.png" width="75px;" height="75px;" alt="Certificates"/><br /><b>Certificates</b></a></td>
+  <td align="center"><a href="#certificates"><img src = "1.png" width="75px;" height="75px;" alt="Certificates"/><br /><b>Certificates</b></a></td>
+ <tr>
+</table>
+</center>
 
-## Certificates![1]
+## Certificates!
 
 
 If you are looking for a way to prepare for a certain exam this is the section for you. Here you'll find a list of certificates, each references to a separate file with focused questions that will help you to prepare to the exam. Good luck :)
