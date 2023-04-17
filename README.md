@@ -1,37 +1,28 @@
 # Professores
 Projeto do curso Introduction to Relational Databases in SQL
 
-<center>
-<table>
- <tr>
-  <td align="center"><a href="#certificates"><img src = "1.png" width="75px;" height="75px;" alt="Certificates"/><br /><b>Certificates</b></a></td>
-  <td align="center"><a href="#certificates"><img src = "1.png" width="75px;" height="75px;" alt="Certificates"/><br /><b>Certificates</b></a></td>
- <tr>
-</table>
-</center>
+## Resumo
 
-## Certificates!
+Você já usou SQL para consultar dados de bancos de dados. Mas você sabia que há muito mais que você pode fazer com bancos de dados? Você pode modelar diferentes fenômenos em seus dados, bem como as relações entre eles. Isso fornece estrutura e consistência aos seus dados, o que resulta em melhor qualidade dos dados. 
 
+Neste curso, foi experimentado isso em primeira mão trabalhando com um conjunto de dados da vida real que foi usado para investigar afiliações universitárias questionáveis. Coluna por coluna, tabela por tabela, podemos desbloquear e admirar todo o potencial dos bancos de dados. Aprendemos como criar tabelas e especificar seus relacionamentos, bem como impor a integridade dos dados. Descobrimos outros recursos exclusivos de sistemas de banco de dados, como restrições.
 
-If you are looking for a way to prepare for a certain exam this is the section for you. Here you'll find a list of certificates, each references to a separate file with focused questions that will help you to prepare to the exam. Good luck :)
+## Módulo 1: Seu primeiro banco de dados
 
-#### AWS
+Neste capítulo, foi criado um banco de dados com um conjunto de comandos SQL simples. Em seguida, foi migrado os dados de tabelas simples existentes para esse banco de dados. E aprendemos como as metainformações sobre um banco de dados podem ser consultadas.
 
-* [Cloud Practitioner](certificates/aws-cloud-practitioner.md) (Latest update: 2020)
-* [Solutions Architect Associate](certificates/aws-solutions-architect-associate.md) (Latest update: 2021)
-* [Cloud SysOps Administration Associate](certificates/aws-cloud-sysops-associate.md) (Latest update: Oct 2022)
+## Módulo 2: Aplique consistência de dados com restrições de atributo
 
+Depois de construir um banco de dados simples, agora é hora de fazer uso dos recursos. Especificamos os tipos de dados nas colunas, imporá a exclusividade da coluna e não permitirá valores NULL.
 
-#### Azure
+## Módulo 3: Identifique exclusivamente registros com restrições de chave
 
-* [AZ-900](certificates/azure-fundamentals-az-900.md) (Latest update: 2021)
+Agora vamos entrar nas melhores práticas de engenharia de banco de dados. É hora de adicionar chaves primárias e estrangeiras às tabelas. Esses são dois dos conceitos mais importantes em bancos de dados e são os blocos de construção que foi usado para estabelecer relacionamentos entre tabelas.
 
-#### Kubernetes
+## Módulo 4: Cola tabelas com *foreign keys*
 
-* [Certified Kubernetes Administrator (CKA)](topics/kubernetes/CKA.md) (Latest update: 2022)
+No capítulo final, foram utilizadas as chaves estrangeiras para conectar tabelas e estabelecer relacionamentos que beneficiarão muito a qualidade dos dados. E foram executadas análises ad hoc no novo banco de dados.
 
+# Criação das tabelas
 
-  * Built-in concurrency
-  * Garbage collected
-  * Platform independent
-  * Compile to standalone binary - anything you need to run your app will be compiled into one binary. Very useful for version management in run-time.
+	[Tabela Afiliações](Criação das tabelas relacionais/Table_alliations.sql)
