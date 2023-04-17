@@ -35,7 +35,7 @@ As Tabelas são criadas com os códigos abaixo, a partir dos dados do [arquivo /
 
 # [Algumas Querys](/Querys_Geral.sql)
 
-```
+```SQL
  -- Query the right table in information_schema
 SELECT table_name 
 FROM information_schema.tables
@@ -44,7 +44,7 @@ WHERE table_schema = 'public';
 ```
 ![image](https://user-images.githubusercontent.com/128917882/232499562-9dc89d65-61dd-4034-a34e-ca903ee12a05.png)
 
-```
+```SQL
 -- Select all professors working for universities in the city of Zurich
 SELECT professors.lastname, universities.id, universities.university_city
 FROM professors
@@ -54,7 +54,7 @@ WHERE universities.university_city = 'Zurich';
 ```
 ![image](https://user-images.githubusercontent.com/128917882/232500028-15b43599-5312-4629-9d05-0feb82365a29.png)
 
-```
+```SQL
 -- Identify the correct constraint name
 SELECT constraint_name, table_name, constraint_type
 FROM information_schema.table_constraints
@@ -62,7 +62,7 @@ WHERE constraint_type = 'FOREIGN KEY';
 ```
 ![image](https://user-images.githubusercontent.com/128917882/232500157-74630243-d03e-4313-aa84-97b625fa7b7d.png)
 
-```
+```SQL
 -- Check that no more affiliations with this organization exist
 SELECT * FROM affiliations
 WHERE organization_id = 'CUREM';
@@ -70,7 +70,7 @@ WHERE organization_id = 'CUREM';
 
 ![image](https://user-images.githubusercontent.com/128917882/232500275-ea5cb249-1dbf-44d0-a817-0011cc3031ee.png)
 
-```
+```SQL
 -- Count the total number of affiliations per university
 SELECT COUNT(*), professors.university_id 
 FROM affiliations
@@ -83,7 +83,7 @@ ORDER BY count DESC;
 
 ![image](https://user-images.githubusercontent.com/128917882/232500375-60f3e19b-911d-4358-81d3-58492daf9dea.png)
 
-```
+```SQL
 -- Join all tables
 SELECT *
 FROM affiliations
