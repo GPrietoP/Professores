@@ -25,4 +25,76 @@ No capítulo final, foram utilizadas as chaves estrangeiras para conectar tabela
 
 # Criação das tabelas
 
-	[Tabela Afiliações](Criação das tabelas relacionais/Table_alliations.sql)
+As Tabelas são criadas com os códigos abaixo, a partir dos dados do [arquivo /university_professors.csv](/university_professors.csv).
+
+* [Tabela Afiliações](/Criação_das_tabelas_relacionais/Table_affiliations.sql)
+* [Tabela Organizações](/Criação_das_tabelas_relacionais/Table_organizations.sql)
+* [Tabela Professores](/Criação_das_tabelas_relacionais/Table_Professors.sql)
+* [Tabela Universidades](/Criação_das_tabelas_relacionais/Table_universities.sql)
+* [Tabela Geral](/Criação_das_tabelas_relacionais/Table_university_Professors.sql)
+
+# [Algumas Querys](/Querys_Geral.sql)
+
+```
+ -- Query the right table in information_schema
+SELECT table_name 
+FROM information_schema.tables
+-- Specify the correct table_schema value
+WHERE table_schema = 'public';
+```
+![image](https://user-images.githubusercontent.com/128917882/232499562-9dc89d65-61dd-4034-a34e-ca903ee12a05.png)
+
+```
+-- Select all professors working for universities in the city of Zurich
+SELECT professors.lastname, universities.id, universities.university_city
+FROM professors
+INNER JOIN universities
+ON professors.university_id = universities.id
+WHERE universities.university_city = 'Zurich';
+```
+![image](https://user-images.githubusercontent.com/128917882/232500028-15b43599-5312-4629-9d05-0feb82365a29.png)
+
+```
+-- Identify the correct constraint name
+SELECT constraint_name, table_name, constraint_type
+FROM information_schema.table_constraints
+WHERE constraint_type = 'FOREIGN KEY';
+```
+![image](https://user-images.githubusercontent.com/128917882/232500157-74630243-d03e-4313-aa84-97b625fa7b7d.png)
+
+```
+-- Check that no more affiliations with this organization exist
+SELECT * FROM affiliations
+WHERE organization_id = 'CUREM';
+```
+
+![image](https://user-images.githubusercontent.com/128917882/232500275-ea5cb249-1dbf-44d0-a817-0011cc3031ee.png)
+
+```
+-- Count the total number of affiliations per university
+SELECT COUNT(*), professors.university_id 
+FROM affiliations
+JOIN professors
+ON affiliations.professor_id = professors.id
+-- Group by the university ids of professors
+GROUP BY professors.university_id
+ORDER BY count DESC;
+```
+
+![image](https://user-images.githubusercontent.com/128917882/232500375-60f3e19b-911d-4358-81d3-58492daf9dea.png)
+
+```
+-- Join all tables
+SELECT *
+FROM affiliations
+JOIN professors
+ON affiliations.professor_id = professors.id
+JOIN organizations
+ON affiliations.organization_id = organizations.id
+JOIN universities
+ON professors.university_id = universities.id;
+```
+![image](https://user-images.githubusercontent.com/128917882/232501415-4d44fe78-c455-439b-88e0-81ec6357543d.png)
+
+
+
